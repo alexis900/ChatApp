@@ -4,6 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mruniversotec.chatapp.SettingsActivity">
+    tools:context="com.mruniversotec.chatapp.SettingsActivity"
+    android:background="@color/colorPrimary">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/settings_image"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/profile_default" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Display Name"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/settings_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Hi there, I'm using ChatApp"
+        android:textSize="14sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/settings_image" />
+
+    <Button
+        android:id="@+id/settings_status_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_change_image"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/settings_status"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#ffffff"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/settings_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_change_status"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="#ffffff"/>
 
 </RelativeLayout>

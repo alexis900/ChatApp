@@ -73,7 +73,10 @@ public class MainActivity extends AppCompatActivity {
             if (item.getItemId() == R.id.log_out_btn){
                 FirebaseAuth.getInstance().signOut();
                 sendToStart();
-            }
+            }else if(item.getItemId() == R.id.main_account_settings){
+                Intent settings_intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(settings_intent);
+        }
         return true;
     }
 }
