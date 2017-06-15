@@ -31,4 +31,9 @@
     <string name="settings_change_status">Change Status</string>
     <string name="default_status">Hi there, I\'m using ChatApp</string>
     <string name="status_edit">Account Status</string>
+    <string name="your_status">Your Status</string>
+    <string name="save_changes_btn_status">Save Changes</string>
+    <string name="saving_changes_status">Saving Changes</string>
+    <string name="status_message">Please wait while we save the changes</string>
+    <string name="status_error">There was some errors in saving Changes.</string>
 </resources>

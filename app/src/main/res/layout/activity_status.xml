@@ -12,4 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/status_appBar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/status_input">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textInputLayout"
+            android:hint="@string/your_status" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/status_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/status_input"
+        android:layout_below="@+id/status_input"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorAccent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/save_changes_btn_status"
+        android:textColor="#ffffff" />
+
 </RelativeLayout>
