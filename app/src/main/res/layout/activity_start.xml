@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mruniversotec.chatapp.StartActivity">
+    tools:context="com.mruniversotec.chatapp.StartActivity"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/textView"
@@ -14,17 +15,33 @@
         android:textSize="24dp"
         tools:layout_editor_absoluteX="79dp"
         tools:layout_editor_absoluteY="170dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="69dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/start_log_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/already_have_account"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/start_reg_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="196dp" />
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="#ffffff"/>
 
     <Button
         android:id="@+id/start_reg_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/need_a_new_account"
+        android:layout_marginBottom="85dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="103dp"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_alignStart="@+id/start_log_btn"
+        android:layout_alignEnd="@+id/start_log_btn"
+        android:backgroundTint="#ffffff"
+        android:textColor="@color/colorPrimary"/>
+
+
 </RelativeLayout>
