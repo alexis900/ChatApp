@@ -1,11 +1,13 @@
 package com.mruniversotec.chatapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -24,6 +26,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
 
+    //ProgressDialog
+    private ProgressDialog mRegProgress;
+
     //Firebase Auth
     private FirebaseAuth mAuth;
 
@@ -33,19 +38,23 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Toolbar Set
-        mToolbar = (Toolbar)findViewById(R.id.register_toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.register_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(R.string.reg_create_account);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //ProgressDialog
+
+        mRegProgress = new ProgressDialog(this);
 
         //Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         //Android Fields
-        mDisplayName = (TextInputLayout)findViewById(R.id.reg_display_name);
-        mEmail = (TextInputLayout)findViewById(R.id.reg_email);
-        mPassword = (TextInputLayout)findViewById(R.id.reg_password);
-        mCreateBtn = (Button)findViewById(R.id.reg_btn);
+        mDisplayName = (TextInputLayout) findViewById(R.id.reg_display_name);
+        mEmail = (TextInputLayout) findViewById(R.id.reg_email);
+        mPassword = (TextInputLayout) findViewById(R.id.reg_password);
+        mCreateBtn = (Button) findViewById(R.id.reg_btn);
 
         mCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,23 +63,36 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = mEmail.getEditText().getText().toString();
                 String password = mPassword.getEditText().getText().toString();
 
-                register_user(display_name,email,password);
+                if (!TextUtils.isEmpty(display_name) || !TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
+                    mRegProgress.setTitle(getString(R.string.reg_dialog_title));
+                    mRegProgress.setMessage(getString(R.string.reg_dialog_message));
+                    mRegProgress.setCanceledOnTouchOutside(false);
+                    mRegProgress.show();
+                    register_user(display_name, email, password);
+                }
             }
+
+        });
+    }
 
             private void register_user(String display_name, String email, String password) {
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
+
+                            mRegProgress.dismiss();
+
                             Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
                             startActivity(mainIntent);
                             finish();
                         }else{
+
+                            mRegProgress.hide();
                             Toast.makeText(RegisterActivity.this, R.string.reg_error, Toast.LENGTH_LONG).show();
                         }
                     }
                 });
             }
-        });
+
     }
-}

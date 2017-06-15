@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "312277517414",
-    "firebase_url": "https://chatapp-ccaa1.firebaseio.com",
-    "project_id": "chatapp-ccaa1",
-    "storage_bucket": "chatapp-ccaa1.appspot.com"
+    "project_number": "1050503275292",
+    "firebase_url": "https://chatapp-55ee3.firebaseio.com",
+    "project_id": "chatapp-55ee3",
+    "storage_bucket": "chatapp-55ee3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:312277517414:android:c39c56a415a02520",
+        "mobilesdk_app_id": "1:1050503275292:android:c39c56a415a02520",
         "android_client_info": {
           "package_name": "com.mruniversotec.chatapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "312277517414-mvhmfm1hg06ovt06qhuh8rommkd165qb.apps.googleusercontent.com",
+          "client_id": "1050503275292-hs849hitpp0gquqm3je2a7qmidorla3l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.mruniversotec.chatapp",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "312277517414-f7sp8m3hi9hgfdkhof1ikf0hkr696dei.apps.googleusercontent.com",
+          "client_id": "1050503275292-a5affrlmn149sjcl2igs2pu4hjebg614.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDMPliuQrxgWCDiwGdHlWm6NyaxeG4ydAM"
+          "current_key": "AIzaSyAJd1qbFGpeLk0kb2J2S_i8vXuFDiUWrrw"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "312277517414-f7sp8m3hi9hgfdkhof1ikf0hkr696dei.apps.googleusercontent.com",
+              "client_id": "1050503275292-a5affrlmn149sjcl2igs2pu4hjebg614.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

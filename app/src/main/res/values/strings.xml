@@ -7,7 +7,7 @@
     <string name="reg_display_name">Display Name</string>
     <string name="reg_password">Password</string>
     <string name="create_account">Create account</string>
-    <string name="reg_error">You got some error</string>
+    <string name="reg_error">Cannot Sign in. Please check the form and try again.</string>
     <string name="log_out">Log Out</string>
     <string name="account_settings">Account Settings</string>
     <string name="all_users">All Users</string>
@@ -18,4 +18,10 @@
     <string name="log_email">Your Email</string>
     <string name="log_password">Password</string>
     <string name="log_btn_login">Login</string>
+    <string name="reg_dialog_title">Registering User</string>
+    <string name="reg_dialog_message">Please wait while we create your account!</string>
+    <string name="login_title">Login</string>
+    <string name="login_dialog_title">Login In</string>
+    <string name="login_dialog_message">Please wait while we check your credentials.</string>
+    <string name="log_error">Cannot Sign in. Please check the form and try again.</string>
 </resources>
