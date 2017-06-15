@@ -17,45 +17,52 @@
         android:src="@drawable/profile_default" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:id="@+id/settings_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/settings_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Display Name"
-        android:textSize="24dp"/>
+        android:textSize="24dp"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        />
 
     <TextView
         android:id="@+id/settings_status"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:text="Hi there, I'm using ChatApp"
+        android:text="@string/default_status"
         android:textSize="14sp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/settings_image" />
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/settings_name"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/settings_status_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings_change_image"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/settings_status"
-        android:layout_centerHorizontal="true"
         android:backgroundTint="#ffffff"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/settings_image_btn"
+        android:layout_alignStart="@+id/settings_image_btn"
+        android:layout_marginBottom="48dp"
+        android:layout_alignEnd="@+id/settings_image_btn" />
 
     <Button
         android:id="@+id/settings_image_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings_change_status"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginTop="14dp"
         android:backgroundTint="@color/colorAccent"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:layout_marginBottom="74dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/settings_image"
+        android:layout_alignEnd="@+id/settings_image" />
 
 </RelativeLayout>
