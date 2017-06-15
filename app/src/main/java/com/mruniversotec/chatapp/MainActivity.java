@@ -1,6 +1,8 @@
 package com.mruniversotec.chatapp;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private Toolbar mToolbar;
+
+    private ViewPager mViewPager;
+    private SectionsPageAdapter mSectionsPagerAdapter;
+
+    private TabLayout mTablayout;
 
     private void sendToStart() {
         Intent startIntent = new Intent(MainActivity.this, StartActivity.class);
@@ -31,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar)findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(R.string.app_name);
+
+
+        //Tabs
+        mViewPager = (ViewPager)findViewById(R.id.main_tabPager);
+        mSectionsPagerAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+        mTablayout = (TabLayout)findViewById(R.id.main_tabs);
+        mTablayout.setupWithViewPager(mViewPager);
 
     }
 

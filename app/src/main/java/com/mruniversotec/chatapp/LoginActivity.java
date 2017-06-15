@@ -67,12 +67,13 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void loginUser(String email, String password) {
+    private void loginUser(final String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(mainIntent);
                     finish();
                 }else{
